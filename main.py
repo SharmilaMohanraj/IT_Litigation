@@ -15,6 +15,10 @@ from schemas import (
 from typing import List, Optional
 from datetime import datetime
 import logging
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -80,7 +84,7 @@ async def list_audit_logs(
     start_date: Optional[datetime] = Query(None, description="Filter by start date"),
     end_date: Optional[datetime] = Query(None, description="Filter by end date"),
 ):
-    """Get audit logs records with optional filtering and pagination"""
+    """Get document processing records with optional filtering and pagination"""
     try:
         # Build filter
         filter_dict = {}
