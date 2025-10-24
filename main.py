@@ -84,7 +84,7 @@ async def list_audit_logs(
     start_date: Optional[datetime] = Query(None, description="Filter by start date"),
     end_date: Optional[datetime] = Query(None, description="Filter by end date"),
 ):
-    """Get document processing records with optional filtering and pagination"""
+    """Get audit logs records with optional filtering and pagination"""
     try:
         # Build filter
         filter_dict = {}
